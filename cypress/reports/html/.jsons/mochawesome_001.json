@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-12-17T20:49:15.627Z",
+    "end": "2021-12-17T20:49:52.900Z",
+    "duration": 37273,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f3dcc2fa-27fe-45a7-9578-7714a4a05f63",
+      "title": "",
+      "fullFile": "cypress/integration/Alz.net/Specs/homeTest.Spec.js",
+      "file": "cypress/integration/Alz.net/Specs/homeTest.Spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0eb97723-0ed8-46ff-a0a0-60460c098766",
+          "title": "navigating to alz home",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "go to home page",
+              "fullTitle": "navigating to alz home go to home page",
+              "timedOut": null,
+              "duration": 32141,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//cy.visit('https://www.alzheimers.net/')\n//cy.visit('https://www.alzheimers.net/?optimizely_disable=true')\ncy.visit(Cypress.env('prod'));",
+              "err": {},
+              "uuid": "a46f56c7-e46a-4cd9-a19f-a404ebd23e67",
+              "parentUUID": "0eb97723-0ed8-46ff-a0a0-60460c098766",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a46f56c7-e46a-4cd9-a19f-a404ebd23e67"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 32141,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

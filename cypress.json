@@ -1,0 +1,13 @@
+{
+  "watchForFileChanges": true,
+  "viewportWidth": 1200,
+  "viewportHeight": 1000,
+  "env": {
+    "qa": "https://www.qa.alzheimers.net/",
+    "prod": "https://www.alzheimers.net/",
+    "dev": "https://www.dev.alzheimers.net/"
+  },
+  "projectId": "x1v7ho",
+
+  "reporter": "cypress-mochawesome-reporter"
+}
