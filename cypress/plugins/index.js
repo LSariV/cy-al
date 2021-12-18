@@ -39,5 +39,6 @@ module.exports = (on, config) => {
     });
   };
 
-
 }
+
+//cypress\integration\Alz.net\Specs\blogTest.spec.js
