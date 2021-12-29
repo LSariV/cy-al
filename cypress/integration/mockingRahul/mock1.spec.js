@@ -1,7 +1,7 @@
 /// <reference types = "cypress" />
 
 describe("My First Test suite for Rahul Cypress api testing", function () {
-    it('', function () {
+    it('mocking', function () {
 
         cy.visit('https://rahulshettyacademy.com/angularAppdemo/')
        // cy.get("button[class ='btn btn-primary']").click();
@@ -42,6 +42,8 @@ describe("My First Test suite for Rahul Cypress api testing", function () {
 
             //validating the oops message if only one book is available
             cy.get('p').contains('Oops only 1 Book available')
+
+//Intercepting response
 
 
 

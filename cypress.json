@@ -9,5 +9,6 @@
   },
   "projectId": "x1v7ho",
 
-  "reporter": "cypress-mochawesome-reporter"
+  "reporter": "cypress-mochawesome-reporter",
+  "testFiles": "**/*.{feature,features}"
 }

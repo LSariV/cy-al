@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cypressRun": "cypress run  --spec 'cypress\\integration\\Alz.net\\Specs\\*.spec.js' ",
+    "cypressRun": "cypress run",
+    "cypressRunAll": "cypress run  --spec 'cypress\\integration\\Alz.net\\Specs\\*.spec.js' ",
     "chromeLocal": "npm run cypressRun -- --headed --browser chrome",
     "firefoxLocal": "npm run cypressRun -- --headed --browser firefox",
     "mochawesome": "npm cypress run -- --headed --browser chrome --reporter mochawesome",
@@ -20,6 +21,12 @@
     "prettier": "^2.5.1"
   },
   "devDependencies": {
+    "cypress-audit": "^1.1.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
     "cypress-mochawesome-reporter": "^2.3.0"
-  }
+  },
+  
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+}
 }
