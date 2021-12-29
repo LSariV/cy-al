@@ -57,7 +57,18 @@ module.exports = (on, config) => {
   });
 };
   
+// code for cucumber taken from toolsqa
 
+module.exports = (on, config) => {
+  // `on` is used to hook into various events Cypress emits
+  // `config` is the resolved Cypress config
+}
+
+const cucumber = require('cypress-cucumber-preprocessor').default
+
+module.exports = (on, config) => {
+  on('file:preprocessor', cucumber())
+}
 
 
 //cypress\integration\Alz.net\Specs\blogTest.spec.js

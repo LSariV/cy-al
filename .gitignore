@@ -3,3 +3,5 @@ node_modules/
 *.videos
 *.mp4
 junk
+reports/
+screenshots/
