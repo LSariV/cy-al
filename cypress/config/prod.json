@@ -1,0 +1,7 @@
+{
+    "baseUrl": "https://www.alzheimers.net/",
+    "env":{
+        "urls": "https://www.alzlheimers.net/blog"
+    }
+    
+    }

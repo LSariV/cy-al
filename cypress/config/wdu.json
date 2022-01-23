@@ -1,0 +1,10 @@
+{
+  
+  "baseUrl": "https://webdriveruniversity.com/",
+  "env":{
+  "firstname": "configfile",
+  "email": "hello@cypress.io",
+  "body": "This data is coming from reated config file ",
+  "lastname": "fromconfig"
+}
+}

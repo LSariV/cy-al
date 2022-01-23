@@ -1,0 +1,7 @@
+{
+    "baseUrl":  "http://www.myspicyhut.com/",
+    "env":{
+        "url": "http://www.myspicyhut.com/"
+    }
+    
+    }

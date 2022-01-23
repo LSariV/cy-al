@@ -1,0 +1,8 @@
+{
+  "extends": "./cypress.json",
+  "baseUrl": "https://webdriveruniversity.com/",
+  "firstname": "configfile",
+  "email": "hello@cypress.io",
+  "body": "This data is coming from reated config file ",
+  "lastname": "fromconfig"
+}

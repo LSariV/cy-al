@@ -2,10 +2,12 @@
   "watchForFileChanges": true,
   "viewportWidth": 1200,
   "viewportHeight": 1000,
-  "baseUrl":"https://www.alzheimers.net/",
+  "baseUrls": "http://www.myspicyhut.com/its-me",
+  "baseUrl": "https://webdriveruniversity.com",
+ 
   "env": {
     "qa": "https://www.qa.alzheimers.net/",
-    "prod": "https://www.alzheimers.net/",
+    "prod": "https://www.allzheimers.net/",
     "dev": "https://www.dev.alzheimers.net/"
   },
   "projectId": "x1v7ho"

@@ -1,0 +1,7 @@
+{
+"baseUrl" : "https://www.qa.alzheimers.net/",
+"env":{
+    "url": "https://www.qa.alzheimers.net/"
+}
+
+}

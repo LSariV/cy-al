@@ -13,62 +13,28 @@
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
 
-/**
- * @type {Cypress.PluginConfig}
- */
-// eslint-disable-next-line no-unused-vars
-module.exports = (on, config) => {
-  // `on` is used to hook into various events Cypress emits
-  // `config` is the resolved Cypress config
+// promisified fs module
+const fs = require('fs-extra')
+const path = require('path')
 
+function getConfigurationByFile(file) {
+  const pathToConfigFile = path.resolve('cypress', 'config', `${file}.json`)
 
-  module.exports = (on, config) => {
-    require('cypress-mochawesome-reporter/plugin')(on);
-  };
+  if (!fs.existsSync(pathToConfigFile)){
+    console.log('No custom config file found')
+    return{}
+  }
 
-  const { beforeRunHook, afterRunHook } = require('cypress-mochawesome-reporter/lib');
-
-  module.exports = (on) => {
-    on('before:run', async (details) => {
-      console.log('override before:run');
-      await beforeRunHook(details);
-    });
-  
-    on('after:run', async () => {
-      console.log('override after:run');
-      await afterRunHook();
-    });
-  };
+  return fs.readJson(pathToConfigFile)
 }
 
-  //Cypress lighthouse code from the npm site
-  
-  const { lighthouse, pa11y, prepareAudit } = require("cypress-audit");
- 
-
+// plugins file
 module.exports = (on, config) => {
-  on("before:browser:launch", (browser = {}, launchOptions) => {
-    prepareAudit(launchOptions);
-  });
+  // accept a configFile value or use development by default
+  const file = config.env.configFile 
 
-  on("task", {
-    lighthouse: lighthouse(), // calling the function is important
-    pa11y: pa11y(), // calling the function is important
-  });
-};
-  
-// code for cucumber taken from toolsqa
-
-module.exports = (on, config) => {
-  // `on` is used to hook into various events Cypress emits
-  // `config` is the resolved Cypress config
-}
-
-const cucumber = require('cypress-cucumber-preprocessor').default
-
-module.exports = (on, config) => {
-  on('file:preprocessor', cucumber())
+  return getConfigurationByFile(file)
 }
 
 
-//cypress\integration\Alz.net\Specs\blogTest.spec.js
+
