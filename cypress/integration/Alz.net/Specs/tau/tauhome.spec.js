@@ -8,7 +8,8 @@ import ContactUs_PO from '../../../../support/pagesObjects/wdu/contactusPage';
 const homePage = new HomePage_PO();
 const contactUsPage = new ContactUs_PO();
 
-
+let username = "xyz" ; 
+let pass = "ssot"
 describe('navigating to tau', () => {
     before(function () {
         cy.fixture('example').then(function (data) {
@@ -66,7 +67,7 @@ describe('navigating to tau', () => {
         // cy.get('[type="submit"]').click()
         // commented above code to get that fuction from page objects 
         contactUsPage.contactForm_Submission(Cypress.env("firstname"), Cypress.env('lastname'),Cypress.env('email'), Cypress.env('body'), "h1", "Thank You for your Message!")
-
+ 
     })
 
 
